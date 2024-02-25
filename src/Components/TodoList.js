@@ -47,7 +47,7 @@ export default function TodoList(){
       handleFilterIncompleteTodos={handleFilterIncompleteTodos}
     />
     <ul>
-      {todos.filter().map(todo =>(
+      {todos.map(todo =>(
         <Todo 
           key ={todo.id}
           todo ={todo}
