@@ -2,7 +2,50 @@
   text-align: center;
 }
 
-.App-logo {
+.topContainer {
+  padding-top: 50px;
+  background-color: #f8f9fa;
+  padding-left: 100px;
+  padding-right: 100px;
+  
+}
+
+.topContainer h1 {
+  font-size: 3em;
+  padding-bottom: 40px;
+  
+}
+
+.topContainer .form-control {
+  margin-right: 100px;
+}
+
+.topContainer .btn {
+  max-width: 300px;
+}
+
+#inputDiv {
+  padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +78,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
