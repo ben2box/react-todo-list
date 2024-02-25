@@ -10,6 +10,9 @@ export default function TodoList(){
     {id: 3, label: 'Finish this TODO List', completed: false}
   ])
 
+  const [showComplete, setShowComplete] = useState(true);
+  const [showIncomplete, setShowIncomplete] = useState(true);
+
   const handleUpdateTodo = (updatedTodo) => {
     const newTodos = todos.map(todo =>
       todo.id === updatedTodo.id ? updatedTodo : todo
@@ -28,33 +31,47 @@ export default function TodoList(){
   }
 
   //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
-  const handleFilterCompleteTodos = () => {
-    const newTodos = todos.filter(todo => todo.completed === true)
-    setTodos(newTodos)
+  const handleShowComplete = () => {
+    // const newTodos = todos.filter(todo => todo.completed === true)
+    // setTodos(newTodos)
+    setShowComplete(true);
+    setShowIncomplete(false);
   }
 
   //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
-  const handleFilterIncompleteTodos = () => {
-    const newTodos = todos.filter(todo => todo.completed === false)
-    setTodos(newTodos)
+  const handleShowIncomplete = () => {
+    // const newTodos = todos.filter(todo => todo.completed === false)
+    // setTodos(newTodos)
+    setShowComplete(false);
+    setShowIncomplete(true);
+  }
+
+  const handleShowAll = () => {
+    setShowComplete(true);
+    setShowIncomplete(true);
   }
 
   return (
     <>
     <TodoComposer handleAddTodo={handleAddTodo} />
     <TabsNav 
-      handleFilterCompleteTodos={handleFilterCompleteTodos}
-      handleFilterIncompleteTodos={handleFilterIncompleteTodos}
+      handleShowAll={handleShowAll}
+      handleShowComplete={handleShowComplete}
+      handleShowIncomplete={handleShowIncomplete}
     />
     <ul>
-      {todos.filter().map(todo =>(
-        <Todo 
-          key ={todo.id}
-          todo ={todo}
-          handleUpdateTodo={handleUpdateTodo}
-          handleRemoveTodo={handleRemoveTodo}
-        />
-      ) )}
+      {
+        todos
+          .filter(todo => (showComplete && todo.completed === true) || (showIncomplete && todo.completed === false))
+          .map(todo => (
+            <Todo 
+              key ={todo.id}
+              todo ={todo}
+              handleUpdateTodo={handleUpdateTodo}
+              handleRemoveTodo={handleRemoveTodo}
+            />
+          ))
+      }
     </ul>
     </>
 
