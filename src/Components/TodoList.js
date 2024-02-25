@@ -27,11 +27,13 @@ export default function TodoList(){
     setTodos(newTodos)
   }
 
+  //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
   const handleFilterCompleteTodos = () => {
     const newTodos = todos.filter(todo => todo.completed === true)
     setTodos(newTodos)
   }
 
+  //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
   const handleFilterIncompleteTodos = () => {
     const newTodos = todos.filter(todo => todo.completed === false)
     setTodos(newTodos)
