@@ -30,18 +30,12 @@ export default function TodoList(){
     setTodos(newTodos)
   }
 
-  //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
   const handleShowComplete = () => {
-    // const newTodos = todos.filter(todo => todo.completed === true)
-    // setTodos(newTodos)
-    setShowComplete(true);
+     setShowComplete(true);
     setShowIncomplete(false);
   }
 
-  //TODO: NOT WORKING AS INTENDED -> DELETES ORIGINAL LIST
   const handleShowIncomplete = () => {
-    // const newTodos = todos.filter(todo => todo.completed === false)
-    // setTodos(newTodos)
     setShowComplete(false);
     setShowIncomplete(true);
   }
