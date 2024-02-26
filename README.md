@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# What is this?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My first React project, as part of a 6 week lab. A TODO List is a go-to project for most beginner devs and I guess I'm no different in that regard.
+Developed from scratch by me, focused on the frontend (persistence was not part of the plan).
+
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
