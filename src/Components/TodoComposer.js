@@ -1,6 +1,4 @@
 import * as React from "react";
-import {onKeyPress} from 'react-dom';
-
 
 function createTodo (label) {
     return {
