@@ -7,6 +7,7 @@
   background-color: #f8f9fa;
   padding-left: 100px;
   padding-right: 100px;
+  padding-bottom: 20px;
   
 }
 
@@ -40,6 +41,12 @@ li {
   justify-content: space-between;
   align-items: center;
   transition: all 0.05s;
+  
+}
+
+li .innerText {
+  position:absolute;
+  left: 10%
 }
 
 .task-complete {

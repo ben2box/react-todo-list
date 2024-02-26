@@ -1,4 +1,5 @@
 import * as React from "react";
+import {onKeyPress} from 'react-dom';
 
 
 function createTodo (label) {
@@ -22,14 +23,19 @@ export default function InputField({ handleAddTodo }) {
         setLabel('')
     }
 
+    const handleSubmit = (e) => {
+      if (e.key === 'Enter') {handleAddTodoClick()}
+    }
+
   return (
-    <div id="inputDiv" className="row">
+    <div id="inputDiv" className="row" type='submit'>
       <input
         type="text"
         placeholder="Add a new task to the list"
         className="col form-control"
         value={label}
         onChange={handleUpdateLabel}
+        onKeyDown={handleSubmit}
       />
       <button onClick={handleAddTodoClick} className="col-4 btn btn-primary" type="submit" disabled={label.length === 0}>Add Task</button>
     </div>

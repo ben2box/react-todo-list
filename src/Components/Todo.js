@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
@@ -27,5 +26,3 @@ export default function Todo({ todo, handleUpdateTodo, handleRemoveTodo }){
       </li>
     )
   }
-  //TODO: Later --> Add onClick event in button to toggle completed/!completed ---->>>> DONE?
-  //TODO: Add a ternary operator to button to change style/color weather completed or !completed
