@@ -28,6 +28,52 @@
   padding-bottom: 40px;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 2px;
+}
+
+li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.05s;
+}
+
+.task-complete {
+  color: #198754;
+  font-weight: 700;
+  text-decoration-line: line-through;
+}
+.task-incomplete {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+li .btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+li .btn-warning {
+  font-size: 0.8em;
+  position:absolute;
+  right: 30%;
+}
+
+li .btn-success {
+  font-size: 0.8em;
+  position:absolute;
+  right: 30%;
+
+}
+
+
+
 
 
 
